@@ -1,58 +1,72 @@
 [
   {
     "title": "Afghanistan",
-    "capital": "Kabul"
+    "capital": "Kabul",
+    "population":"10000"
   },
   {
     "title": "Australia",
-    "capital": "Canberra"
+    "capital": "Canberra",
+    "population":"10000"
   },
   {
     "title": "Belgium",
-    "capital": "Brussels"
+    "capital": "Brussels",
+    "population":"10000"
   },
   {
     "title": "Cuba",
-    "capital": "Havana"
+    "capital": "Havana",
+    "population":"10000"
   },
   {
     "title": "Egypt",
-    "capital": "Cairo"
+    "capital": "Cairo",
+    "population":"10000"
   },
   {
     "title": "Fiji",
-    "capital": "Suva"
+    "capital": "Suva",
+    "population":"10000"
   },
   {
     "title": "India",
-    "capital": "New Delhi"
+    "capital": "New Delhi",
+    "population":"10000"
   },
   {
     "title": "Kenya",
-    "capital": "Nairobi"
+    "capital": "Nairobi",
+    "population":"10000"
   },
   {
     "title": "Nepal",
-    "capital": "Kathmandu"
+    "capital": "Kathmandu",
+    "population":"10000"
   },
   {
     "title": "Pakistan",
-    "capital": "Islamabad"
+    "capital": "Islamabad",
+    "population":"10000"
   },
   {
     "title": "Singapore",
-    "capital": "Singapore City"
+    "capital": "Singapore City",
+    "population":"10000"
   },
   {
     "title": "Spain",
-    "capital": "Madrid"
+    "capital": "Madrid",
+    "population":"10000"
   },
   {
     "title": "United Kingdom",
-    "capital": "London"
+    "capital": "London",
+    "population":"10000"
   },
   {
     "title": "Uzbekistan",
-    "capital": "Tashkent"
+    "capital": "Tashkent",
+    "population":"10000"
   }
 ]
