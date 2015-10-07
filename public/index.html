@@ -1,0 +1,107 @@
+<html>
+<head>
+    <title>Pratik WebData</title>
+
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/media-queries.css">
+    <link rel="stylesheet" href="../css/magnific-popup.css">
+
+    <script src="../js/modernizr.js"></script>
+
+    <link rel="shortcut icon" href="favicon.png" >
+
+</head>
+
+<body>
+<header id="home">
+
+
+    <div class="row banner">
+        <div class="banner-text">
+            <h1 class="responsive-headline">Web Data Project</h1>
+            <h3>I'm a <span>graphic designer</span>, <span>illustrator</span> and <span>webdesigner</span> creating awesome and
+                effective visual identities for companies of all sizes around the globe. Let's <a class="smoothscroll" href="#about">start clicking </a>
+                and learn more <a class="smoothscroll" href="#about">about Project 1</a>.</h3>
+            <hr />
+            <ul class="social">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                <li><a href="#"><i class="fa fa-skype"></i></a></li>
+            </ul>
+        </div><div id="abc"> <br> </div>
+        <input  type="button" value="Click"
+                onclick="my();" />
+        <input  type="button" value="Click for chart"
+                onclick="my1();" />
+
+        <script src="js/jquery-1.10.2.min.js" ></script>
+        <script src="js/ajaxGetPost.js"></script>
+        <script src="js/Charts.js"></script>
+
+
+        <script type="text/javascript">
+            //google.load('visualization', '1', {package:['corechart']});
+            //google.setOnLoadCallback(my1());
+            function my1() {
+                // var json = null;
+                $.ajax({
+                    type: "GET",
+                    dataType: "json",
+                    url: "Data.json",
+                    cache: false,
+                    beforeSend: function() {
+                        $('#abc').html('loading please wait...');
+                    }, 'success': function (data) {
+                        var json = data;
+                        var ctx = document.getElementById("abc").getContext("2d");
+                        window.myPie = new Chart(ctx).Pie(json);
+                    }
+                });
+            }
+
+        </script>
+        <script language="javascript" type="text/javascript">
+            function my() {
+                $.ajax({
+                    type: "GET",
+                    dataType: "json",
+                    url: "Data.json",
+                    cache: false,
+                    beforeSend: function() {
+                        $('#abc').html('loading please wait...');
+                    },
+                    success: function(jsondata) {
+                        console.log(jsondata);
+                        var str = '';
+                        str += '<ul>';
+                        $.each(jsondata, function(idx, obj) {
+                            str += '<li>' + obj.title + ' - ' + obj.capital + '-' + obj.population+ '</li>';
+                        });
+                        str += '</ul>';
+                        $('#abc').html(str);
+                    }
+                });
+            }
+        </script>
+    </div>
+
+
+</header> <!-- Header End -->
+
+<!-- Java Script
+================================================== -->
+
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/waypoints.js"></script>
+<script src="js/jquery.fittext.js"></script>
+<script src="js/magnific-popup.js"></script>
+<script src="js/init.js"></script>
+
+</body>
+</html>
